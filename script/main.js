@@ -1,16 +1,4 @@
-var hbdmp = document.getElementById("hbdmp");
-var icon = document.getElementById("icon");
 
-icon.onclick = function(){
-    if(hbdmp.paused){
-        hbdmp.play();
-        icon.src ="img/pause.png";
-    }else{
-        hbdmp.pause();
-        icon.src = "img/play.png";
-    }
-
-}
 
 // Import the data to customize and insert them into page
 const fetchData = () => {
@@ -318,3 +306,17 @@ const animationTimeline = () => {
 
 // Run fetch and animation in sequence
 fetchData();
+
+var hbdmp = document.getElementById("hbdmp");
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+    if(hbdmp.paused){
+        hbdmp.play();
+        icon.src ="img/pause.png";
+    }else{
+        hbdmp.pause();
+        icon.src = "img/play.png";
+    }
+
+}
