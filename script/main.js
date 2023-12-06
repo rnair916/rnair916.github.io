@@ -310,7 +310,7 @@ fetchData();
 var hbdmp = document.getElementById("hbdmp");
 var icon = document.getElementById("icon");
 
-/*icon.onclick = function(){
+icon.onclick = function(){
     if(hbdmp.paused){
         hbdmp.play();
         icon.src ="img/pause.png";
@@ -319,4 +319,4 @@ var icon = document.getElementById("icon");
         icon.src = "img/play.png";
     }
 
-}*/
+}
