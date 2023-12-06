@@ -22,7 +22,7 @@ const fetchData = () => {
           var hbdmp = document.getElementById("hbdmp");
           var icon = document.getElementById("icon");
 
-          icon.onclick = function(){
+       /*   icon.onclick = function(){
               if(hbdmp.paused){
                   hbdmp.play();
                   icon.src ="img/pause.png";
@@ -31,7 +31,7 @@ const fetchData = () => {
                   icon.src = "img/play.png";
               }
 
-          }
+          }*/
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
         } 
