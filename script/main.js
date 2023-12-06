@@ -19,6 +19,19 @@ const fetchData = () => {
 
         // Check if the iteration is over
         // Run amimation if so
+          var hbdmp = document.getElementById("hbdmp");
+          var icon = document.getElementById("icon");
+
+          icon.onclick = function(){
+              if(hbdmp.paused){
+                  hbdmp.play();
+                  icon.src ="img/pause.png";
+              }else{
+                  hbdmp.pause();
+                  icon.src = "img/play.png";
+              }
+
+          }
         if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
         } 
@@ -307,16 +320,4 @@ const animationTimeline = () => {
 // Run fetch and animation in sequence
 fetchData();
 
-var hbdmp = document.getElementById("hbdmp");
-var icon = document.getElementById("icon");
 
-icon.onclick = function(){
-    if(hbdmp.paused){
-        hbdmp.play();
-        icon.src ="img/pause.png";
-    }else{
-        hbdmp.pause();
-        icon.src = "img/play.png";
-    }
-
-}
