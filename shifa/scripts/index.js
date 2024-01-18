@@ -4,8 +4,8 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Jan 23, 2023',
-  name: 'Shifa'
+  birthdate: 'Jan 23, 2024',
+  name: 'SHIFA'
 };
 
 function hideEverything() {
@@ -30,6 +30,7 @@ let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
+  console.log(distance);
 
   document.getElementById('day').innerText = Math.floor(distance / day);
   document.getElementById('hour').innerText = Math.floor(
@@ -438,6 +439,12 @@ x = setInterval(function() {
     }
   }
 
+  function playMusic() {
+    const music = new Audio("hbd.mp3");
+    music.play();
+    // playButton.remove();
+  }
+
   window.addEventListener('resize', function() {
     w = c.width = window.innerWidth;
     h = c.height = window.innerHeight;
@@ -473,6 +480,7 @@ x = setInterval(function() {
 
     function openBox() {
       if (step === 1) {
+        playMusic();
         box.removeEventListener('click', openBox, false);
       }
       stepClass(step);
@@ -499,3 +507,6 @@ x = setInterval(function() {
   //     console.log("happy birthday");
   // }
 }, second);
+
+/*const playButton = document.getElementById('play-video');
+playButton.addEventListener('click', playMusic, false);*/
