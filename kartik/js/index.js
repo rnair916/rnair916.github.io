@@ -9,6 +9,8 @@
       timer = null;
   console.log('wat', card);
   openB.addEventListener('click', function () {
+    playMusic();
+
     card.setAttribute('class', 'open-half');
     if (timer) clearTimeout(timer);
     timer = setTimeout(function () {
@@ -27,3 +29,9 @@
   });
 
 }());
+
+function playMusic() {
+  const music = new Audio("hbd.mp3");
+  music.play();
+  // playButton.remove();
+}
